@@ -192,6 +192,7 @@ ol {
 }
 
 .wrapper{
+	z-index: 4;
 	background: #E5E5E5;
 	position: absolute;
 }
@@ -589,10 +590,10 @@ ol {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-rows: 370px 370px;
-	gap: 30px 30px;
+	gap: 30px;
 	grid-template-areas:
-	  "cars cars art sidebar"
-	  "cat cards cards sidebar";
+	"cars cars art sidebar"
+	"cat cards cards sidebar";
 }
 .card{
 	background: var(--white);
@@ -718,6 +719,8 @@ ol {
 	grid-area: 2 / 2 / 3 / 3
 }
 .mini__blog__item{
+	max-width: 262px;
+	max-height: 170px;
 	padding: 25px;
 	display: flex;
 	flex-direction: column;
@@ -976,33 +979,36 @@ ol {
 	border: 3px solid #ffffff85!important;
 	padding: 3px;
 }
-
-
-
-.interview__blogs__side{
-	width: fit-content;
-	display: flex;
-	flex-wrap: wrap;
+.home__page__carousel__block>.container {
+	display: grid; 
+	grid-auto-columns: 50%; 
+	grid-template-columns: 1fr 1fr 1fr 1fr; 
+	grid-template-rows: 1fr 1fr; 
+	gap: 30px 30px; 
+	grid-template-areas: 
+	  "carousel carousel interview__blog interview__blog"
+	  "carousel carousel mini-blog-1 mini-blog-2"; 
 }
+.carousel { 
+	grid-area: carousel; 
+	}
+.interview__blog { 
+	grid-area: interview__blog; 
+	}
+.mini-blog-1 { 
+	grid-area: mini-blog-1; 
+	}
+.mini-blog-2 { 
+	grid-area: mini-blog-2; 
+	}
+
+
 .interview__blog{
 	max-width: 555px;
-	max-height: 370px;
-	margin-top: 0;
-	margin-left: auto;
 	padding: 35px;
 	background: url("../img/blog/iImage.png") #B4D1E0 right bottom no-repeat!important;
 }
-.interview__blog__title{
-	width: 65%;
-	margin: 25px 0 30px;
-}
-.interview__blog__text{
-	width: 42%;
-	margin: 0 0 30px;
-}
-.mini__blogs{
-	margin-left: auto;
-}
+
 
 
 
